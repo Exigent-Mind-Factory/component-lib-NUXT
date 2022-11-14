@@ -1,0 +1,277 @@
+@import './variables';
+@import './buttons.scss';
+
+html {
+    scroll-behavior: smooth !important;
+}
+/* Typography */
+body{
+    margin: 0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--white);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    line-height: normal;
+    margin-top: 0;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 22px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h6{
+    font-size: 15px;
+}
+
+p{
+    color: var(--secondary-color);
+    font-family: var(--font-fam);
+    line-height: 1.3;
+}
+
+p.sub-heading{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+label{
+    margin-bottom: 15px;
+    color: var(--alternate-color);
+}
+
+@media (min-width: 768px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    p.sub-heading{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    h4{
+        font-size: 26px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    h6{
+        font-size: 18px;
+    }
+    p.sub-heading{
+        font-size: 1.6rem;
+    }
+}
+
+.thin{
+    font-weight: 300;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none !important;
+}
+
+/* Color */
+.primary{
+    background-color: var(--primary-color);
+}
+.secondary{
+    background-color: var(--secondary-color);
+}
+.alternate{
+    background-color: var(--alternate-color);
+}
+.light-grey{
+    background-color: var(--light-grey);
+}
+
+/* Layout */
+.disflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disflex-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.disflex-space-between-middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disflex-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.disflex-vertical-middle{
+    display: flex;
+    align-content: center;
+}
+
+.disflex-wrap{
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.inner-wrapper{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+@media (min-width: 1200px){
+    .inner-wrapper{
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1400px){
+    .inner-wrapper{
+        max-width: 1200px;
+    }
+}
+
+/* Labels */
+label{
+    display: block;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+input, textarea{
+    padding: var(--size-md);
+    border: 1px solid var(--light-grey);
+    border-radius: var(--border-radius-small);
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    font-size: .8rem;
+    font-family: var(--font-fam);
+}
+input::placeholder, textarea::placeholder{
+    color: var(--mid-grey);
+}
+
+/* Forms */
+.form-fields{
+    margin: 20px 0;
+}
+.field-group, .field-group-2, .field-group-3, .field-group-4 {
+    width: 100%;
+    position: relative;
+}
+@media (min-width: 768px){
+    .field-group-2{
+        width: calc(50% - 10px);
+    }
+    .field-group-3{
+        width: calc(50% - 10px);
+    }
+    .field-group-4{
+        width: calc(50% - 10px);
+    }
+}
+@media (min-width: 992px){
+    .field-group-3{
+        width: calc(33% - 10px);
+    }
+}
+@media (min-width: 1200px){
+    .field-group-4{
+        width: calc(25% - 10px);
+    }
+}
+
+/* Buttons, Inputs and Labels */
+
+.btn-outline{
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 3px;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    outline: none;
+    cursor: pointer;
+}
+.btn-outline img.icon{
+    width: 20px;
+    margin-left: 20px;
+}
+
+/* Button Hover */
+.btn-outline:hover{
+    transition: 0.5s;
+    border-color: var(--alternate-color);
+    background-color: var(--alternate-color);
+    box-shadow: 0 0 10px var(--primary-color-shadow);
+}
