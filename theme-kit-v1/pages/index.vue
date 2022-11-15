@@ -1,6 +1,5 @@
 <template>
   <main class="home-page">
-    <Navbar />
     <!-- Color -->
     <ColorTypography />
 

@@ -12,17 +12,17 @@
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/">
+                        <router-link to="/dashboards/template-one">
                             Template One
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/">
+                        <router-link to="/dashboards/template-two">
                             Template Two
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/">
+                        <router-link to="/dashboards/template-three">
                             Template Three
                         </router-link>
                     </li>
@@ -92,7 +92,7 @@ section.navbar{
                         padding: 0 15px;
                         transition: 0.5s;
                         border-bottom: 2px solid transparent;
-                        &.router-link-active, &:hover{
+                        &.nuxt-link-exact-active, &:hover{
                             transition: 0.5s;
                             background-color: var(--alternate-color);
                             border-bottom: 2px solid var(--primary-color);

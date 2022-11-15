@@ -1,6 +1,7 @@
 <template>
     <section class="sidebar">
-        <p class="sub-heading">Exigent Component Library</p>
+        <img class="mf-logo" src="../assets/img/mf-logo.svg" alt="">
+        <!-- <p class="sub-heading">Exigent Component Library</p> -->
         <div class="menu">
             <ul>
                 <li class="disflex-start color">
@@ -85,7 +86,7 @@
 </script>
 
 <style lang="scss" scoped>
-section.sidebar{
+section.sidebar {
     position: fixed;
     top: 0;
     left: -290px;
@@ -97,30 +98,46 @@ section.sidebar{
     transition: 0.5s;
     overflow: scroll;
     z-index: 9999;
-    @media(min-width: 1080px){
+
+    @media(min-width: 1080px) {
         width: 300px;
         left: 0;
     }
-    &.active{
+
+    &.active {
         transition: 0.5s;
         transform: translateX(290px);
     }
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         display: none;
     }
-    .menu{
+
+    .mf-logo {
+        width: 100%;
+        height: max-content;
+        display: block;
+        padding: 0 0 20px 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #3c3c3c;
+    }
+
+    .menu {
         margin-top: 20px;
-        ul{
+
+        ul {
             padding: 0;
             margin: 0;
-            li{
+
+            li {
                 position: relative;
                 margin-bottom: 5px;
                 transition: 0.3s;
                 padding: 0 15px;
                 border-radius: 4px;
                 background-color: var(--alternate-color);
-                &::before{
+
+                &::before {
                     content: '';
                     position: absolute;
                     left: 5px;
@@ -131,28 +148,33 @@ section.sidebar{
                     background-color: var(--primary-color);
                     opacity: 0;
                 }
-                &:hover{
+
+                &:hover {
                     transition: 0.4s;
                     padding: 0 20px;
                     box-shadow: 0 0 5px var(--primary-color-shadow);
-                    &::before{
+
+                    &::before {
                         transition: .8s;
                         opacity: 1;
                     }
                 }
-                a{
+
+                a {
                     width: 100%;
                     padding: 15px 0;
                     color: var(--white);
                     font-size: .8rem;
                 }
             }
-            a.router-link-active{
-                li{
+
+            a.router-link-active {
+                li {
                     transition: 0.4s;
                     padding: 0 30px;
                     box-shadow: 0 0 10px var(--primary-color-shadow);
-                    &::before{
+
+                    &::before {
                         transition: .8s;
                         opacity: 1;
                     }
@@ -160,18 +182,21 @@ section.sidebar{
             }
         }
     }
-    .copyright{
+
+    .copyright {
         display: block;
         width: 100%;
         text-align: center;
         padding: 10px 0 0 0;
         border-top: 1px solid var(--alternate-color);
-        span{
+
+        span {
             color: #fff;
             font-size: .8rem;
         }
     }
-    p.sub-heading{
+
+    p.sub-heading {
         color: #fff;
     }
 }

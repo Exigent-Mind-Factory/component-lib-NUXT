@@ -1,0 +1,119 @@
+// Typography
+body{
+    margin: 0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--white);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    line-height: normal;
+    margin-top: 0;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 22px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h6{
+    font-size: 15px;
+}
+
+p{
+    color: var(--secondary-color);
+    font-family: var(--font-fam);
+    line-height: 1.3;
+}
+
+p.sub-heading{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+label{
+    margin-bottom: 15px;
+    color: var(--alternate-color);
+}
+
+@media (min-width: 768px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    p.sub-heading{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    h4{
+        font-size: 26px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    h6{
+        font-size: 18px;
+    }
+    p.sub-heading{
+        font-size: 1.6rem;
+    }
+}
+
+.thin{
+    font-weight: 300;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none !important;
+}

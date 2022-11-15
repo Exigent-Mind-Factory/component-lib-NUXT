@@ -33,11 +33,32 @@
   --button-box-shadow-color: rgb(0 0 0 / 16%);
 }
 
-html {
-  scroll-behavior: smooth !important;
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 3px;
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  outline: none;
+  cursor: pointer;
 }
 
-/* Typography */
+.btn-outline img.icon {
+  width: 20px;
+  margin-left: 20px;
+}
+
+/* Button Hover */
+.btn-outline:hover {
+  transition: 0.5s;
+  border-color: var(--alternate-color);
+  background-color: var(--alternate-color);
+  box-shadow: 0 0 10px var(--primary-color-shadow);
+}
+
 body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -165,7 +186,6 @@ a {
   text-decoration: none !important;
 }
 
-/* Color */
 .primary {
   background-color: var(--primary-color);
 }
@@ -182,7 +202,6 @@ a {
   background-color: var(--light-grey);
 }
 
-/* Layout */
 .disflex {
   display: flex;
   justify-content: center;
@@ -295,31 +314,8 @@ input::placeholder, textarea::placeholder {
     width: calc(25% - 10px);
   }
 }
-/* Buttons, Inputs and Labels */
-.btn-outline {
-  border: 2px solid var(--primary-color);
-  background-color: transparent;
-  border-radius: 3px;
-  width: 100%;
-  padding: 18px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: var(--primary-color);
-  outline: none;
-  cursor: pointer;
-}
-
-.btn-outline img.icon {
-  width: 20px;
-  margin-left: 20px;
-}
-
-/* Button Hover */
-.btn-outline:hover {
-  transition: 0.5s;
-  border-color: var(--alternate-color);
-  background-color: var(--alternate-color);
-  box-shadow: 0 0 10px var(--primary-color-shadow);
+html {
+  scroll-behavior: smooth !important;
 }
 
 /*# sourceMappingURL=theme.css.map */

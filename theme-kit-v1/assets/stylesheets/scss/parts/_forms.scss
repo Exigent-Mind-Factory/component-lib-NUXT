@@ -1,0 +1,53 @@
+// Forms
+/* Labels */
+label{
+    display: block;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+input, textarea{
+    padding: var(--size-md);
+    border: 1px solid var(--light-grey);
+    border-radius: var(--border-radius-small);
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    font-size: .8rem;
+    font-family: var(--font-fam);
+}
+input::placeholder, textarea::placeholder{
+    color: var(--mid-grey);
+}
+
+/* Forms */
+.form-fields{
+    margin: 20px 0;
+}
+.field-group, .field-group-2, .field-group-3, .field-group-4 {
+    width: 100%;
+    position: relative;
+}
+@media (min-width: 768px){
+    .field-group-2{
+        width: calc(50% - 10px);
+    }
+    .field-group-3{
+        width: calc(50% - 10px);
+    }
+    .field-group-4{
+        width: calc(50% - 10px);
+    }
+}
+@media (min-width: 992px){
+    .field-group-3{
+        width: calc(33% - 10px);
+    }
+}
+@media (min-width: 1200px){
+    .field-group-4{
+        width: calc(25% - 10px);
+    }
+}
