@@ -56,30 +56,12 @@
                     voluptas qui possimus quia quo adipisci officia.</p>
             </div>
         </div>
-        {{ name }}
-        {{ ip }}
     </section>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            ip: null,
-            name: "Tevan Lee",
-        }
-    },
-    mounted(){
-        this.fetchSomething()
-    },
-    methods: {
-        async fetchSomething() {
-            const ip = await this.$axios.$get('https://api.apitore.com/api/9')
-            this.ip = ip.data
-            
-        }
-    }
-}
+<script setup>
+    // const packageTest = await $http.$get('https://unpkg.com/nuxt/package.json')
+    // console.log(packageTest.name) // log "nuxt"
 </script>
 
 

@@ -1,5 +1,6 @@
 <template>
   <main class="home-page">
+    
     <!-- Color -->
     <ColorTypography />
 
