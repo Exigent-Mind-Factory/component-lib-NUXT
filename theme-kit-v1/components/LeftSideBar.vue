@@ -14,6 +14,18 @@
                     <a href="#forms">Forms</a>
                 </li>
                 <li class="disflex-start">
+                    <a href="#menus">Menus</a>
+                </li>
+                <li class="disflex-start">
+                    <a href="#modals">Modals</a>
+                </li>
+                <li class="disflex-start">
+                    <a href="#tables">Tables</a>
+                </li>
+                <li class="disflex-start">
+                    <a href="#charts">Charts</a>
+                </li>
+                <li class="disflex-start">
                     <a href="#breadcrumbs">Breadcrumbs</a>
                 </li>
                 <li class="disflex-start">
@@ -24,12 +36,6 @@
                 </li>
                 <li class="disflex-start">
                     <a href="#steps">Steps</a>
-                </li>
-                <li class="disflex-start">
-                    <a href="#menus">Menus</a>
-                </li>
-                <li class="disflex-start">
-                    <a href="#tables">Tables</a>
                 </li>
                 <li class="disflex-start">
                     <a href="#icons">Icons</a>
@@ -86,7 +92,7 @@
 </script>
 
 <style lang="scss" scoped>
-section.sidebar{
+section.sidebar {
     position: fixed;
     top: 0;
     left: -290px;
@@ -98,35 +104,43 @@ section.sidebar{
     overflow: scroll;
     z-index: 9999;
     border-right: 2px solid #fff;
-    @media(min-width: 1080px){
+
+    @media(min-width: 1080px) {
         width: 300px;
         left: 0;
     }
-    &.active{
+
+    &.active {
         transition: 0.5s;
         transform: translateX(290px);
     }
-    &::-webkit-scrollbar{
+
+    &::-webkit-scrollbar {
         display: none;
     }
-    .mf-logo{
+
+    .mf-logo {
         width: 100%;
         padding: 10px;
         box-sizing: border-box
     }
-    .menu{
+
+    .menu {
         margin-top: 20px;
-        ul{
+
+        ul {
             padding: 0;
             margin: 0;
-            li{
+
+            li {
                 position: relative;
                 margin-bottom: 5px;
                 transition: 0.3s;
                 padding: 0 15px;
                 border-radius: 4px;
                 background-color: var(--alternate-color);
-                &::before{
+
+                &::before {
                     content: '';
                     position: absolute;
                     left: 5px;
@@ -137,28 +151,33 @@ section.sidebar{
                     background-color: var(--primary-color);
                     opacity: 0;
                 }
-                &:hover{
+
+                &:hover {
                     transition: 0.4s;
                     padding: 0 20px;
                     box-shadow: 0 0 5px var(--primary-color-shadow);
-                    &::before{
+
+                    &::before {
                         transition: .8s;
                         opacity: 1;
                     }
                 }
-                a{
+
+                a {
                     width: 100%;
                     padding: 15px 0;
                     color: var(--white);
                     font-size: .8rem;
                 }
             }
-            a.router-link-active{
-                li{
+
+            a.router-link-active {
+                li {
                     transition: 0.4s;
                     padding: 0 30px;
                     box-shadow: 0 0 10px var(--primary-color-shadow);
-                    &::before{
+
+                    &::before {
                         transition: .8s;
                         opacity: 1;
                     }
@@ -166,18 +185,21 @@ section.sidebar{
             }
         }
     }
-    .copyright{
+
+    .copyright {
         display: block;
         width: 100%;
         text-align: center;
         padding: 10px 0 0 0;
         border-top: 1px solid var(--alternate-color);
-        span{
+
+        span {
             color: #fff;
             font-size: .8rem;
         }
     }
-    p.sub-heading{
+
+    p.sub-heading {
         color: #fff;
     }
 }
