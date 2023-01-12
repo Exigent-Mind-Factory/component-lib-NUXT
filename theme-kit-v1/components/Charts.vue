@@ -12,6 +12,10 @@
         <div class="barchart-box">
           <canvas id="barChart"></canvas>
         </div>
+
+        <div class="scatterchart-box">
+          <canvas id="scatterChart"></canvas>
+        </div>
       </div>
 
     </div>
@@ -29,13 +33,30 @@ export default {
   data() {
     return {
       primaryColor: '#E6007E',
-      secondaryColor: '#088B99'
+      secondaryColor: '#088B99',
+      scatterDataset1: [
+        { x: 0.65, y: 0.21 },
+        { x: 0.65, y: 0.18 },
+        { x: 0.64, y: 0.38 },
+        { x: 0.82, y: 0.16 },
+        { x: 0.03, y: 0.56 },
+        { x: 0.34, y: 0.75 }
+      ],
+      scatterDataset2: [
+        { x: 0.15, y: 0.11 },
+        { x: 0.45, y: 0.28 },
+        { x: 0.74, y: 0.58 },
+        { x: 0.22, y: 0.76 },
+        { x: 0.53, y: 0.96 },
+        { x: 0.94, y: 0.25 }
+      ]
     }
   },
 
   mounted() {
     const linectx = document.getElementById('lineChart');
     const barctx = document.getElementById('barChart');
+    const scatterctx = document.getElementById('scatterChart');
 
     const lineChart = new Chart(linectx, {
       type: 'line',
@@ -182,6 +203,89 @@ export default {
       }
     });
 
+    const scatterChart = new Chart(scatterctx, {
+      type: 'scatter',
+      data: {
+        labels: [
+          'Scatter Dataset'
+        ],
+        datasets: [{
+          label: 'Dataset 1',
+          data: this.scatterDataset1,
+          borderWidth: 1,
+          fill: false,
+          borderColor: '#E6007E',
+          backgroundColor: '#E6007E',
+          // tension: 0.4,
+        },
+        {
+          label: 'Dataset 2',
+          data: this.scatterDataset2,
+          borderWidth: 1,
+          fill: false,
+          borderColor: '#088B99',
+          backgroundColor: '#088B99',
+          // tension: 0.4,
+        }
+        ]
+      },
+      options: {
+        // maintainAspectRatio: false,
+        elements: {
+          point: {
+            pointstyle: 'circle',
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+            align: 'center',
+            labels: {
+              boxWidth: 10,
+              boxHeight: 10,
+              useBorderRadius: true,
+              borderRadius: 10,
+              usePointStyle: true,
+              // pointStyleWidth: 12,
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            min: 0,
+            max: 1,
+            border: {
+              display: false
+            },
+            grid: {
+              display: false,
+              // drawTicks: false
+            },
+            title: {
+              display: true,
+              text: 'Lexical',
+            }
+          },
+          y: {
+            beginAtZero: true,
+            min: 0,
+            max: 1,
+            grid: {
+              // drawTicks: false
+            },
+            ticks: {
+              // stepSize: 1,
+            },
+            title: {
+              display: true,
+              text: 'Semantic',
+            }
+          }
+        }
+      }
+    });
+
     lineChart;
     barChart;
   }
@@ -193,12 +297,12 @@ export default {
   gap: 20px;
 
   @media (min-width: 768px) {
-    grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
   }
 
   .linechart-box,
-  .barchart-box {
+  .barchart-box,
+  .scatterchart-box {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
     padding: 10px;
     border-radius: 5px;
