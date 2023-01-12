@@ -9,6 +9,18 @@
         <!-- Forms -->
         <Forms />
 
+        <!-- Menus -->
+        <Menus />
+
+        <!-- Modals -->
+        <Modals />
+
+        <!-- Tables -->
+        <Tables />
+
+        <!-- Charts -->
+        <Charts />
+
         <!-- Breadcrumbs -->
         <Breadcrumbs />
 
@@ -21,11 +33,6 @@
         <!-- Steps -->
         <Steps />
 
-        <!-- Menus -->
-        <Menus />
-
-        <!-- Tables -->
-        <Tables />
 
         <!-- Icons -->
         <Icons />
